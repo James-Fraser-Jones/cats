@@ -41,7 +41,7 @@ function buy_quantity() {
         let clone = cart.children[1].children[0].cloneNode(true);
         clone.style.display = null;
         clone.children[0].textContent = name;
-        clone.children[1].textContent = "£" + price;
+        clone.children[1].textContent = "£" + price.toFixed(2);
         clone.children[2].textContent = bought;
         cart.children[1].appendChild(clone);
       }
