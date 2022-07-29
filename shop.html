@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cats - Shop</title>
+</head>
+<body>
+  <a href="index.html" id="home">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="mailing.html">Mailing List</a>
+  <a href="shop.html">Shopping</a>
+  <a href="history.html">History</a>
+  <h1>Shopping</h1>
+  <p>See following table for items and prices: </p>
+  <table id="items">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Smudge</td>
+        <td>£3.99</td>
+        <td>4</td>
+        <td><button onclick="buy('Smudge')">Buy</button></td>
+      </tr>
+      <tr>
+        <td>Luna</td>
+        <td>£2.99</td>
+        <td>8</td>
+        <td><button onclick="buy('Luna')">Buy</button></td>
+      </tr>
+      <tr>
+        <td>Edie</td>
+        <td>£100</td>
+        <td>1</td>
+        <td><button onclick="buy('Edie')">Buy</button></td>
+      </tr>
+      <tr>
+        <td>Rain</td>
+        <td>£7.45</td>
+        <td>2</td>
+        <td><button onclick="buy('Rain')">Buy</button></td>
+      </tr>
+      <tr>
+        <td>Dog</td>
+        <td>£2.30</td>
+        <td>6</td>
+        <td><button onclick="buy('Dog')">Buy</button></td>
+      </tr>
+      <tr>
+        <td>Scrags</td>
+        <td>£1</td>
+        <td>15</td>
+        <td><button onclick="buy('Scrags')">Buy</button></td>
+      </tr>
+      <tr>
+        <td>Nega-Cat</td>
+        <td>£-7.77</td>
+        <td>99</td>
+        <td><button onclick="buy('Nega-Cat')">Buy</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Your cart:</p>
+  <table id="cart">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="display: none;">
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Total price:</p>
+  <p id="total">£0.00</p>
+
+  <button onclick="location.href='success_shop.html';">Go to checkout</button>
+
+  <div id="modal" style="visibility: hidden;">
+    <div>
+      <h4>Buying X</h4>
+      <label for="">Quantity:</label><br>
+      <input type="number"><br><br>
+      <button onclick="cancel()">Cancel</button>
+      <button onclick="buy_quantity()">Add To Cart</button>
+    </div>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+</html>
